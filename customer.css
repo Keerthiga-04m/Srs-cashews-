@@ -46,13 +46,16 @@ body {
 
 /* Header Styles - Transparent */
 header {
-    background: rgba(15, 23, 42, 0.1);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(20px);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
+    transition: transform 0.3s ease;
+    transform: translateY(0);
 }
 
 .header-content {
@@ -80,6 +83,10 @@ header {
 .logo-text {
     font-size: 1.75rem;
     font-weight: 800;
+}
+
+main {
+    margin-top: 80px; /* Adjust based on your header height */
 }
 
 .logo-main {
@@ -1875,5 +1882,33 @@ footer {
         position: static !important;
         margin: 0 !important;
         padding: 20px !important;
+    }
+}
+
+
+/* Add to customer.css - Mobile layout for quantity container */
+@media (max-width: 480px) {
+    .quantity-container {
+        flex-direction: row !important;
+        gap: 0.75rem;
+        align-items: center;
+    }
+    
+    .quantity-selector {
+        flex: 1;
+    }
+    
+    .add-to-cart-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .product-info {
+        padding: 1rem;
+    }
+    
+    /* Ensure proper spacing */
+    .quantity-label {
+        margin-bottom: 0.75rem;
     }
 }
