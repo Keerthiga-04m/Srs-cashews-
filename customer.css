@@ -340,7 +340,7 @@ nav a:hover {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--text-white), var(--accent-gold));
@@ -380,7 +380,7 @@ nav a:hover {
 
 .category-card {
     background: linear-gradient(135deg, var(--dark-card), rgba(30, 58, 138, 0.2));
-    padding: 2.5rem 2rem;
+    padding: 1rem;
     border-radius: var(--radius);
     text-align: center;
     box-shadow: var(--shadow);
