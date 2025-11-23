@@ -1,4 +1,3 @@
-// customer.js
 // API Functions
 async function apiCall(endpoint, options = {}) {
   try {
