@@ -34,7 +34,7 @@ loginForm.addEventListener('submit', function(e) {
         alert('Login successful! Welcome ' + user.name);
 
         // Redirect to main page
-        window.location.href = 'index.html';
+        window.location.href = 'a.html';
     } else {
         alert('Invalid email or password!');
     }
