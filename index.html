@@ -12,12 +12,18 @@
         <div class="login">
             <div class="content">
                 <h1>Log In</h1>
+                <!-- Replace the entire form section in the login div with this -->
                 <form id="login-form">
                     <input type="email" id="login-email" placeholder="email" required>
                     <input type="password" id="login-password" placeholder="password" required>
-                    <span class="remember">Remember me</span>
+                    
+                    <div class="remember-container">
+                        <input type="checkbox" id="remember-me" class="remember-checkbox">
+                        <label for="remember-me" class="remember-label">Remember me</label>
+                    </div>
                     <span class="forget">Forgot password?</span>
                     <span class="clearfix"></span>
+                    
                     <button type="submit">Log In</button>
                 </form>
                 <span class="loginwith">Or Connect with</span>
@@ -56,7 +62,7 @@
                     <input type="text" id="register-name" placeholder="name" required>
                     <input type="email" id="register-email" placeholder="email" required>
                     <input type="password" id="register-password" placeholder="password" required> 
-                    <span class="remember">I accept terms</span> 
+                   <!-- <span class="remember">I accept terms</span>  -->
                     <span class="clearfix"></span>
                     <button type="submit">Register</button>
                 </form>
