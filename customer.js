@@ -63,6 +63,7 @@ const scrollThreshold = 100;
 async function init() {
     await loadProducts();
     loadCartFromStorage();
+    setupOrderButtonAnimation();
     setupEventListeners();
     updateCartCount();
     startCarousel();
@@ -1254,3 +1255,27 @@ window.copyUPI = function() {
         showNotification('UPI ID copied to clipboard!');
     });
 };
+
+
+// Add this function to handle the order confirmation button animation
+function setupOrderButtonAnimation() {
+    const orderButton = document.getElementById('place-order');
+    
+    orderButton.addEventListener('click', function(e) {
+        if (Object.keys(cart).length === 0) {
+            showNotification('Your cart is empty. Add some premium Panruti products first!', true);
+            return;
+        }
+        
+        if (!orderButton.classList.contains('animate')) {
+            // Start animation
+            orderButton.classList.add('animate');
+            
+            // After animation completes, show the order popup
+            setTimeout(() => {
+                placeOrder();
+                orderButton.classList.remove('animate');
+            }, 3000); // Show popup after 3 seconds (during animation)
+        }
+    });
+}
